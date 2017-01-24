@@ -15,10 +15,11 @@
   "require" : {
     "php" : ">=5.0",
     "skel/header" : "~0.0",
-    "skel/app" : "~0.0",
+    "skel/component" : "~0.0",
+    "skel/config" : "~0.0",
     "skel/db" : "~0.0",
     "skel/cms" : "~0.0",
-    "skel/config" : "~0.0",
+    "skel/app" : "~0.0",
     "skel/routing" : "~0.0"
   },
   "require-dev" : {
