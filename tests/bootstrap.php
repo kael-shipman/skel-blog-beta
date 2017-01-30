@@ -15,6 +15,13 @@ class Db extends \Skel\Db implements \Skel\Interfaces\AppDb {
   public function getTemplate(string $name) {
     return new StringTemplate('',false);
   }
+
+  public function getMenuItems(string $name=null) {
+    return array(
+      '/' => 'home',
+      '/about' => 'about'
+    );
+  }
 }
 
 class Config extends \Skel\Config implements \Skel\Interfaces\AppConfig, \Skel\Interfaces\DbConfig {
@@ -22,6 +29,7 @@ class Config extends \Skel\Config implements \Skel\Interfaces\AppConfig, \Skel\I
   function getPublicRoot() { return $this->get('public-root'); }
   function getDbPdo() { return $this->get('db-pdo'); }
   function getDbContentRoot() { return $this->get('db-content-root'); }
+  function getTemplateDir() { return $this->get('template-dir'); }
 }
 
 class App extends \Skel\App {

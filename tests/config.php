@@ -9,6 +9,7 @@ return array(
   'context-root' => $cwd,
   'public-root' => $cwd.'/tests',
   'db-pdo' => $db,
-  'db-content-root' => $cwd.'/tests/content'
+  'db-content-root' => $cwd.'/tests/content',
+  'template-dir' => $cwd.'/tests/content/templates'
 );
 

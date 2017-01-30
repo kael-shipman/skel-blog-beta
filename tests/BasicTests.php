@@ -19,10 +19,9 @@ class BasicTests extends TestCase {
     if ($this->app) return $this->app;
 
     $config = new Config(getcwd().'/tests/config');
-    $this->app = new App($config, new Db($config));
+    $this->app = new App($config, new Db($config), new \Skel\Router());
     $this->app
       ->setCms(new \Skel\Cms($config))
-      ->setRouter(new \Skel\Router())
       ->getRouter()
         ->addRoute(new \Skel\Route('/test', $this->app, 'test', null, 'test'))
     ;
